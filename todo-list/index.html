@@ -12,13 +12,15 @@
       <!-- Metodos Vue -->
       <!-- Eventos Vue / : or @ -->
       <input type="text" v-model="nuevaFruta" @keyup.enter="agregarFruta">
-      <!-- <input type="number" v-model="cantidad" @keyup.enter="agregarFruta"> -->
+      <input type="number" v-model="cantidad" @keyup.enter="agregarFruta">
       <button v-on:click="agregarFruta"> Agregar</button>
 
       <ul>
         <li v-for="fruta of frutas">
-          <input type="number" v-model.number="fruta.cantidad" @keyup.enter="agregarCantidad">
-          {{fruta.nombre}}  
+          <!-- <input type="number" v-model.number="fruta.cantidad" @keyup.enter="agregarCantidad"> -->
+          
+          {{fruta.nombre}}  /
+          Cantidad: {{fruta.cantidad}} -
           <button @click="fruta.cantidad++"> + </button>
           <button @click="fruta.cantidad--"> - </button>
           <span v-if="fruta.cantidad === 0"> - Sin stock</span>

@@ -13,19 +13,18 @@ const app = new Vue({
         {nombre: "Naranja", cantidad: 12},
     ],
       nuevaFruta: '',
+      cantidad: '',
       total: 0
     },
     methods:{
       agregarFruta(){
         this.frutas.push({
-          nombre: this.nuevaFruta
+          nombre: this.nuevaFruta,
+          cantidad: this.cantidad
         });
-        this.nuevaFruta = ''
-      }
-      ,
-      agregarCantidad(){
-        this.cantidad = cantidad;
-      }
+        this.nuevaFruta = '',
+        this.cantidad = 0
+      } 
     },
     computed:{
       // Los computed son afectados dentro de la propiedad
