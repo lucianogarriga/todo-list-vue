@@ -7,7 +7,7 @@
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous" />
-    <title>Methods TODO</title>
+    <title>CRUD LocalStorage - Vue</title>
     <style>
       body{
         margin: 0 auto;
@@ -19,9 +19,11 @@
   <body>
     <div id="app" class="container mt-5">
       <h1 class="text-center">{{title}}</h1>
+      <h5 class="mt-4">{{subtitle}}</h5>
+      <span>(Agrega tareas, actualiza la página, y mira cómo tus tareas quedan guardadas!)</span>
 
       <input type="text" v-model="newTasks" class="form-control my-3" @keyup.enter="addTasks"/>
-      <button class="btn btn-primary" @click="addTasks">Agregar</button>
+      <button class="btn btn-primary" @click="addTasks">Agregar una nueva tarea</button>
 
       <h5 class="mt-2">{{newTasks}}</h5>
 
@@ -29,7 +31,7 @@
         <!-- <div class="alert alert-primary mt-3" role="alert"> </div> -->
         <div :class="['alert', task.state ? 'alert-danger' : 'alert-success']" role="alert">
           <div class="d-flex justify-content-between align-items-center">
-            <div>{{index + 1}} - {{task.name}} - {{task.state}}</div>
+            <div>{{index + 1}}. {{task.name}} / {{task.state ? "Pendiente" : "Completada"}}</div>
 
             <div>
               <button class="btn btn-success btn-sm" @click="changeState(index)">Ok</button>
