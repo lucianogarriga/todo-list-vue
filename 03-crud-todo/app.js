@@ -2,10 +2,10 @@ const app = new Vue({
     el:'#app',
     // En data, podemos colocar pseudo-variables
     data:{
-        title: "Gym App con Vue.Js",
-        subtitle: "CRUD App manipulando datos en el localStorage utilizando Vue.Js",
+        title: "TODO App con Vue.Js",
+        subtitle: "CRUD App manipulando datos en el localStorage",
         tasks:[],
-        newTasks: ''
+        newTasks: '' 
     },
     methods:{
         addLocalStorage: function(){ 
