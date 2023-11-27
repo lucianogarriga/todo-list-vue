@@ -7,10 +7,7 @@ const app = new Vue({
       //Vamos a trabajar los datos
       title: "Programando con Vue",
     //   frutas: ['manzana','banana','naranja']
-    frutas: [
-        {nombre: "Manzana", cantidad: 0},
-        {nombre: "Banana", cantidad: 14},
-        {nombre: "Naranja", cantidad: 12},
+    frutas: [ 
     ],
       nuevaFruta: '',
       cantidad: '',
