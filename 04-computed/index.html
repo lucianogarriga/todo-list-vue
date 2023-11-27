@@ -10,22 +10,89 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <style>
+      @import "https://fonts.googleapis.com/css?family=Roboto:300,400,500";
+      body {
+        margin: 0 auto;
+        max-width: 50em;
+        font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        line-height: 1.5;
+        padding: 2em 1em;
+        background: #eee;
+        color: #303030;
+      }
+      .bold-500 {
+        font-weight: 500;
+      }
+      .bold-800 {
+        font-weight: 800;
+      }
+      .size-md {
+        font-size: 20px;
+      }
+      .gradientText {
+        -webkit-text-fill-color: transparent;
+        background-color: #1c19cb;
+        background-image: linear-gradient(261deg, #00adfd 14%, #191ccb 93%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        font-size: 32px;
+        font-weight: 800;
+      }
+    </style>
   </head>
   <body>
     <div id="app" class="container mt-4">
-      <h1>App para invertir mensajes</h1>
-      <input type="text" class="form-control" v-model="mensaje" />
-      <h2>Mensaje: {{mensaje}}</h2>
-      <h2>Mensaje invertido: {{invertido}}</h2>
+      <h1 class="gradientText text-center mb-4">
+        Input para invertir mensajes
+      </h1>
+      <p class="text-center">
+        Herramientas utilizadas:
+        <span class="bold-800">Computed Properties, Events, Directives (v-model)</span>
+      </p>
+      <input
+        type="text"
+        class="form-control mt-4 mb-4"
+        placeholder="Ingresa aquí lo que tu quieras!"
+        v-model="mensaje"
+      />
+      <p class="bold-500 size-md">Mensaje normal: {{mensaje}}</p>
+      <p class="bold-500 size-md">Mensaje invertido: {{invertido}}</p>
 
+      <div class="mt-5 mb-5"></div>
       <hr />
+      <div class="mt-5 mb-5"></div>
       <div>
-        <h2>Contador</h2>
-        <button @click="contador--" class="btn btn-primary m-2">-</button>
-        <button @click="contador++" class="btn btn-primary m-2">+</button>
-        <div class="progress">
-          <div class="progress-bar bg-success" role="progressbar" :style="{width: contador+'%'}"
-            aria-valuenow="25" aria-valuemin="0"  aria-valuemax="100" >
+        <h1 class="gradientText text-center align-items-center mb-4">
+          Contador + Barra de Progreso
+        </h1>
+        
+        <div class="container mt-2">
+          <div class="row">
+            <div class="col-12 text-center" >
+              <p>
+                Herramientas utilizadas:
+                <span class="bold-800">Computed Properties, Methods, Events, Directives</span>
+              </p>
+              <button @click="restar" class="btn btn-danger m-2" >
+                Restar 5%
+              </button>
+              <button @click="sumar" class="btn btn-primary m-2">
+                Sumar 5%
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="progress mt-4">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            :style="{width: contador+'%'}"
+            :class="color"
+            aria-valuenow="25"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
             {{contador}}%
           </div>
         </div>
