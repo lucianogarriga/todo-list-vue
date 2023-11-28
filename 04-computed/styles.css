@@ -1,0 +1,28 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500";
+body {
+    margin: 0 auto;
+    max-width: 50em;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.5;
+    padding: 2em 1em;
+    background: #eee;
+    color: #303030;
+}
+.bold-500 {
+    font-weight: 500;
+}
+.bold-800 {
+    font-weight: 800;
+}
+.size-md {
+    font-size: 20px;
+}
+.gradientText {
+    -webkit-text-fill-color: transparent;
+    background-color: #1c19cb;
+    background-image: linear-gradient(261deg, #00adfd 14%, #191ccb 93%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 32px;
+    font-weight: 800;
+}
