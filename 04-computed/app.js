@@ -23,7 +23,7 @@ const app = new Vue({
             return {
                 'bg-success': this.contador <= 100,
                 'bg-warning': this.contador < 66 && this.contador > 21,
-                'bg-danger': this.contador < 20 && this.contador > 0
+                'bg-danger': this.contador <= 20 && this.contador >= 0
             }
         }
     } 
